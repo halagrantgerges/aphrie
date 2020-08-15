@@ -1,0 +1,80 @@
+<br /><br /><br />
+<div class="container">
+  <div class="row text-center">
+    <div class="col">
+      <div class="example-button-row">
+        <button
+          data-rel="all"
+          mat-button
+          color="primary"
+          class="btn btn-lg raduis-me btn-sm m-3 waves-effect filter"
+          [ngClass]="{
+            'btn-primary': filterBy == 'all',
+            'btn-light': filterBy != 'all'
+          }"
+          [class.active]="filterBy == 'all'"
+          (click)="filterBy = 'all'"
+        >
+          All
+        </button>
+        <button
+          data-rel="1"
+          mat-button
+          color="primary"
+          class="btn btn-primary btn-lg raduis-me btn-sm m-3 waves-effect filter"
+          [ngClass]="{
+            'btn-primary': filterBy == 'app',
+            'btn-light': filterBy != 'app'
+          }"
+          [class.active]="filterBy == 'app'"
+          (click)="filterBy = 'app'"
+        >
+          App
+        </button>
+
+        <button
+          data-rel="2"
+          mat-button
+          color="primary"
+          class="btn btn-primary btn-lg raduis-me btn-sm m-3 waves-effect filter"
+          [ngClass]="{
+            'btn-primary': filterBy == 'card',
+            'btn-light': filterBy != 'card'
+          }"
+          [class.active]="filterBy == 'card'"
+          (click)="filterBy = 'card'"
+        >
+          Card
+        </button>
+
+        <button
+          data-rel="2"
+          mat-button
+          color="primary"
+          class="btn btn-primary btn-lg raduis-me btn-sm m-3 waves-effect filter"
+          [ngClass]="{
+            'btn-primary': filterBy == 'web',
+            'btn-light': filterBy != 'web'
+          }"
+          [class.active]="filterBy == 'web'"
+          (click)="filterBy = 'web'"
+        >
+          Web
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="gallery" id="gallery">
+    <div
+      class="mb-3 pics animation all 2"
+      *ngFor="let image of visibleImages | imageFilter: filterBy"
+    >
+      <img
+        class="img-fluid"
+        src="../../assets/images/portfolio/{{ image.url }}"
+        alt="Card image cap"
+      />
+    </div>
+  </div>
+</div>

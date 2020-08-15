@@ -1,0 +1,22 @@
+<br /><br /><br /><br />
+<div class="container">
+  <div class="row">
+    <div class="col text-center">
+      <h1>Team</h1>
+      <div class="text-secondary">
+        ed ut perspiciatis unde omnis iste natus error sit voluptatem
+        accusantium doloremque
+      </div>
+    </div>
+  </div>
+  <br />
+  <div class="row">
+    <div class="col" *ngFor="let num of team">
+      <img
+        src="../../assets/images/team-{{ num }}.jpg"
+        class="rounded-circle"
+        width="90%"
+      />
+    </div>
+  </div>
+</div>

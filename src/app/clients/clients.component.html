@@ -1,0 +1,38 @@
+<br /><br /><br /><br />
+<div class="container text-center" style="background-color: #d4d4e9;">
+  <div class="row">
+    <div class="col"><h1>Our Clients</h1></div>
+  </div>
+  <div class="row">
+    <div class="col text-secondary">
+      <p>
+        Sed ut perspiciatis unde omnis iste natus error. sit voluptatem accusa
+        Sed ut perspiciatis unde omnis iste natus error si
+      </p>
+    </div>
+  </div>
+
+  <br /><br />
+
+  <div class="row ml-4 mr-3 mb-1">
+    <div class="col w-25 bg-white mr-1" *ngFor="let client of clients">
+      <img
+        class=""
+        src="../../assets/images/clients/client-{{ client }}.png"
+        width="80%"
+      />
+    </div>
+  </div>
+  <div class="row ml-4 mr-3 mb-1" style="height: 100px;">
+    <div class="col w-25 bg-white mr-1" *ngFor="let client of clients">
+      <img
+        class=""
+        src="../../assets/images/clients/client-{{ client + 4 }}.png"
+        width="80%"
+      />
+    </div>
+  </div>
+
+  <br /><br />
+  <br /><br />
+</div>
